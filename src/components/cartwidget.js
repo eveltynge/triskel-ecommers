@@ -1,9 +1,9 @@
-const Cart = () => {
+const Cart = (props) => {
     return (
         <>
-            <img src={props.cart} />
+            <img src={props.imagen} />
         </>
     );
 }
 
-export default cartwidget;
+export default Cart;
