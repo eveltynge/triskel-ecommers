@@ -1,4 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from './CartWidget';
+import Imagen from '../assets/cartwidget/cart1.png';
 
 const NavBar = () => {
     return (
@@ -26,7 +28,8 @@ const NavBar = () => {
             </ul>
             </div>
         </nav> 
-    </>
+        <CartWidget imagen={Imagen} />
+    </>    
     );
 }
 

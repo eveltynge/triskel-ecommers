@@ -1,4 +1,4 @@
-const Cart = (props) => {
+const CartWidget = (props) => {
     return (
         <>
             <img src={props.imagen} />
@@ -6,4 +6,4 @@ const Cart = (props) => {
     );
 }
 
-export default Cart;
+export default CartWidget;
