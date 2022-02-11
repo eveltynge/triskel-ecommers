@@ -26,9 +26,9 @@ const NavBar = () => {
                 <a className="nav-link" href="views/contacto.html">Contacto</a>
                 </li>
             </ul>
+            <CartWidget imagen={Imagen} />
             </div>
         </nav> 
-        <CartWidget imagen={Imagen} />
     </>    
     );
 }
