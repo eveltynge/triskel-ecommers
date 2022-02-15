@@ -18,6 +18,7 @@ const ItemListContainer = () => {
 
     const onAdd = (cantidad) => {
         alert('Ud ha seleccionado ' + cantidad + 'items.');
+        console.log('Se ha agregado un producto');
     }
     return (
         <>

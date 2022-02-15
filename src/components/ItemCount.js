@@ -1,6 +1,6 @@
-// El componente ItemCount recibe 3 props (stock,initial,onAdd).
-// El componente ItemCount debe estar dentro del componente ItemListContainer .
-// La función onAdd debe estar definida en el componente padre de ItemCount (guiño guiño ItemListContainer)
+// El componente ItemCount recibe 3 props (stock,initial,onAdd). check
+// El componente ItemCount debe estar dentro del componente ItemListContainer . check
+// La función onAdd debe estar definida en el componente padre de ItemCount (guiño guiño ItemListContainer) check
 
 import { Button } from "bootstrap";
 import { useEffect, useState } from 'react';
