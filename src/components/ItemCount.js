@@ -1,21 +1,34 @@
-import { Button } from "bootstrap";
-import {useState} from 'react';
+// El componente ItemCount recibe 3 props (stock,initial,onAdd).
+// El componente ItemCount debe estar dentro del componente ItemListContainer .
+// La función onAdd debe estar definida en el componente padre de ItemCount (guiño guiño ItemListContainer)
 
-const ItemCount = (props) => {
-    const [contador, setContador] = useState(1);
+import { Button } from "bootstrap";
+import { useEffect, useState } from 'react';
+
+const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
+    const [contador, setContador] = useState(0);
+
+    useEffect(() => {
+        setContador(initial);
+    }, [initial]);
 
     const aumento = () => {
-        setContador(contador+1);
+        if (contador < stock) {
+            setContador(contador + 1);
+        }
     }
+
     const disminuye = () => {
-        setContador(contador-1);
-    }
+        if (contador > initial) {
+            setContador(contador - 1);
+        }
+    };
+    
     return (
         <>
-        <button onClick={aumento}>+</button>
-        <p> {contador <= 5 ? contador : "5"} </p>
-        <button onClick={disminuye}>-</button>
-        <button onClick={contador}>Total</button>
+        <Button onClick={aumento} >Sumar</Button>
+        <Button onClick={disminuye} >Restar</Button>
+        <Button onClick={()=> onAdd(contador)} >Agregar al carrito</Button>
         </>
     );
 }
