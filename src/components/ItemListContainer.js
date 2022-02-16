@@ -5,16 +5,37 @@ import ItemList from "./ItemList";
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
-const {products} = require('../utils/products')
+import products from '../utils/products';
 
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
-
-    useEffect(() => {
+    console.log(products);
+    const customFetch = (time, data) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (true) {
+              resolve(data);
+            } else {
+              reject("Producto no encontrado");
+            }
+          }, time);
+        });
+      };
+      useEffect(() => {
+        customFetch(2000, products)
+          .then((result) => setDatos(result))
+          .catch((err) => console.log(err));
+      }, []);
+   /*  const getProducts = () => {
         customFetch(2000, products)
             .then(result => setDatos(result))
             .catch(error => console.log(error))
-    }, [datos]);
+
+    }
+    useEffect(() => {
+        getProducts()
+    }, []);*/
+    console.log(datos); 
 
     const onAdd = (cantidad) => {
         alert('Ud ha seleccionado ' + cantidad + 'items.');
@@ -22,7 +43,7 @@ const ItemListContainer = () => {
     }
     return (
         <>
-            <ItemList Items={datos} />
+            <ItemList items={datos} />
             <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </>
     )

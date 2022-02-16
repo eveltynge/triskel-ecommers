@@ -19,4 +19,4 @@ const products = [
     }
 ]
 
-module.export = {products}
+export default products;
