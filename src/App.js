@@ -10,7 +10,7 @@ function App() {
     <h2>Triskel Macrame</h2>
     <NavBar />    
     <ItemListContainer />
-    <ItemCount />
+
     
   </>
   );

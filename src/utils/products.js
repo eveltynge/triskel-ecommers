@@ -1,21 +1,21 @@
 const products = [
     {
       id: 1,
-      name: "Almohadón Teseo",
+      title: "Almohadón Teseo",
       stock: 3,
-      cost: 2000,
+      price: 2000,
     },
     {
       id: 2,
-      name: "Lámpara Sáuco",
+      title: "Lámpara Sáuco",
       stock: 4,
-      cost: 3000,
+      price: 3000,
     },
     {
       id: 3,
-      name: "Tapiz Selene",
+      title: "Tapiz Selene",
       stock: 4,
-      cost: 4000,
+      price: 4000,
     }
 ]
 

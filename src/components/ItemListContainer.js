@@ -14,7 +14,7 @@ const ItemListContainer = () => {
         customFetch(2000, products)
             .then(result => setDatos(result))
             .catch(error => console.log(error))
-    }, []);
+    }, [datos]);
 
     const onAdd = (cantidad) => {
         alert('Ud ha seleccionado ' + cantidad + 'items.');
