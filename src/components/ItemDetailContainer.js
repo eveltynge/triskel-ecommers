@@ -5,9 +5,9 @@ import { useParams } from 'react-router';
 
 //hace la lectura de la data q esta en custome fetch y se lo psa por props al item detail
 
-const { products } = require('../utils/products');
+import products from '../utils/products';
 
-const getItem = () => {
+const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});
     const { itemId } = useParams();
 
@@ -16,9 +16,10 @@ const getItem = () => {
             .then(result => setDato(result))
             .cathc(error => console.log(error))
     },[]);
-
+    console.log(itemId)
     return (
         <ItemDetail item={dato} />
+        
     );
 }
 
