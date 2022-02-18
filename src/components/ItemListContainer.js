@@ -27,7 +27,6 @@ const ItemListContainer = () => {
           .then(result => setDatos(result))
           .catch(err => console.log(err))
       }, [datos]);
-    console.log(datos); 
 
     const onAdd = (cantidad) => {
         alert('Ud ha seleccionado ' + cantidad + 'items.');

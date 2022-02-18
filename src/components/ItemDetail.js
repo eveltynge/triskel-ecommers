@@ -16,7 +16,7 @@ const ItemDetail = ({ item }) => {
             item && item.image_url
             ?
             (
-            <div>
+                <div>
                 <p>{item.title}</p>
                 <p>{item.stock}</p>
                 <p>{item.price}</p>
@@ -33,5 +33,6 @@ const ItemDetail = ({ item }) => {
         },
     </>)
 }
+console.log('Holaaa');
 
 export default ItemDetail;
