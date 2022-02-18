@@ -1,3 +1,9 @@
+Aplicacion e-commerces Triskel Macrame para la comercializacion de productos creados con dicha tecnica.
+
+Video demostrativo de navegabilidad:
+https://drive.google.com/drive/u/1/folders/1uzWTf9aT3rr39X8jsjYE1fVkEab7dzzX
+
+---------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
