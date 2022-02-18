@@ -1,6 +1,3 @@
-
-// La función onAdd debe estar definida en el componente padre de ItemCount (guiño guiño ItemListContainer)
-
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
@@ -10,7 +7,6 @@ import { useParams } from 'react-router';
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { idCategory } = useParams();
-    console.log(products);
 
     const customFetch = (time, data) => {
         return new Promise((resolve, reject) => {
@@ -26,16 +22,11 @@ const ItemListContainer = () => {
       useEffect(() => {
         customFetch(2000, products.filter(item => {
           if (idCategory === undefined) return item;
-          return item.categoryId === parseInt(idCategory)
+          return item.category_id === parseInt(idCategory)
         }))
           .then(result => setDatos(result))
           .catch(err => console.log(err))
-      }, []);
-      //useEffect(() => {
-      //  customFetch(2000, products)
-      //    .then((result) => setDatos(result))
-      //    .catch((err) => console.log(err));
-      //}, []);
+      }, [datos]);
     console.log(datos); 
 
     const onAdd = (cantidad) => {

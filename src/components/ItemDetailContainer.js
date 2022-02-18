@@ -2,10 +2,8 @@ import ItemDetail from './ItemDetail';
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router';
-
-//hace la lectura de la data q esta en custome fetch y se lo psa por props al item detail
-
 import products from '../utils/products';
+//hace la lectura de la data q esta en custome fetch y se lo psa por props al item detail
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});

@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import Item from './Item';
+import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({ item }) => {
-    const [ItemCount, setItemCount] = useState(0);
+    const [itemCount, setItemCount] = useState(0);
+    
     const onAdd = (qty) => {
         alert("Ha seleccionado " + qty + "items.")
         setItemCount(qty);
@@ -11,17 +13,20 @@ const ItemDetail = ({ item }) => {
     return (
     <>
         {
-            //item && item.image_url
-            true
-            ?(
+            item && item.image_url
+            ?
+            (
             <div>
-                <p>{item.id}</p>
                 <p>{item.title}</p>
                 <p>{item.stock}</p>
                 <p>{item.price}</p>
                 <p>{item.description}</p>
-                <p>{item.image_url}</p>
-                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                <img src={item.image_url} />
+                {
+                    itemCount === 0
+                    ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                    : <Link to='/cart' style={{textDecoration: "none", color: "blue"}}><Button>Finalizar compra</Button></Link>
+                }
             </div>)
             :
             <p>Cargando el item...</p>

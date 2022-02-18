@@ -13,7 +13,7 @@ const ItemList = ({items}) => {
                 price={item.price} 
                 description={item.description}
                 image_url={item.image_url}/>)
-                : <p>Cargando tus compras...</p>
+                : <p>Cargando gatitos</p>
             }
         </>
     );
