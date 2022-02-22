@@ -16,12 +16,12 @@ const ItemDetail = ({ item }) => {
             item && item.image_url
             ?
             (
-                <div>
-                <p>{item.title}</p>
-                <p>{item.stock}</p>
-                <p>{item.price}</p>
-                <p>{item.description}</p>
-                <img src={item.image_url} />
+            <div className="card col-4" style={{ width: "350px", margin: "10px", padding: "7px" }}>
+                <h4 className="card-title">{item.title}</h4>
+                <img src={item.image_url} alt={item.title}/>
+                <p className="card-text">{item.description}</p>
+                <p>Disponible: {item.stock}</p>
+                <p>${item.price}</p>
                 {
                     itemCount === 0
                     ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />

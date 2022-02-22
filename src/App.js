@@ -4,12 +4,12 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
-  <BrowserRouter>
+  <Router>
     <NavBar />
       <Routes>
         <Route exact path='/' element={<ItemListContainer />} /> 
@@ -17,7 +17,7 @@ function App() {
         <Route path='/item/:itemId' element={<ItemDetailContainer />} /> 
         <Route path='/cart' element={<Cart />} />
       </Routes>
-  </BrowserRouter>
+  </Router>
   );
 }
 
