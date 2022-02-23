@@ -26,7 +26,7 @@ const ItemListContainer = () => {
         }))
           .then(result => setDatos(result))
           .catch(err => console.log(err))
-      }, [datos]);
+      }, [idCategory]); //la dependecia esta mal, es idcategory
 
     const onAdd = (cantidad) => {
         alert('Ud ha seleccionado ' + cantidad + 'items.');
