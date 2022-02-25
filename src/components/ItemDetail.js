@@ -33,6 +33,5 @@ const ItemDetail = ({ item }) => {
         },
     </>)
 }
-console.log('Holaaa');
 
 export default ItemDetail;

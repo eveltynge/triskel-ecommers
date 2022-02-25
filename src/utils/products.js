@@ -5,7 +5,7 @@ const products = [
       stock: 3,
       price: 2000,
       description: "Almohadón de 40x40cm, en hilo de algodón color crema.",
-      image_url: ["https://imgur.com/PN6ehEr"],
+      image_url: 'https://imgur.com/PN6ehEr',
       category_id: 4,
       category: {
         name: "Accesorios",
@@ -18,7 +18,7 @@ const products = [
       stock: 4,
       price: 3000,
       description: "Los aros de madera le dan la estructura, y el hilo en tono crema la textura.",
-      image_url: "https://drive.google.com/file/d/1yZxtVvULxnx_YLZ653h1NWB5qC1TResZ/view?usp=sharing",
+      image_url: 'https://drive.google.com/file/d/1yZxtVvULxnx_YLZ653h1NWB5qC1TResZ/view?usp=sharing',
       category_id:4,
       category: {
         name: "Accesorios",
@@ -31,7 +31,7 @@ const products = [
       stock: 4,
       price: 4000,
       description: "Hecho sobre madera recuperada, hermoso y sencillo tapiz de cuerda de algodón.",
-      image_url: "https://drive.google.com/file/d/1VU8gmXUMeQnSvztadAovuDS4vdGI-FWN/view?usp=sharing",
+      image_url: 'https://drive.google.com/file/d/1VU8gmXUMeQnSvztadAovuDS4vdGI-FWN/view?usp=sharing',
       category_id: 3,
       category: {
         name: "Tapiz",
