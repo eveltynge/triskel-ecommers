@@ -19,7 +19,13 @@ export const StoreProvider = ({children}) => {
     }
 
     const removeItem = (id) => {
-        setInCart(inCart.filter((article) => article.id !== id))
+        products.splice(
+            products.findIndex((i) => i.id === id), 1
+        )
+        setProducts([...products])
+        if(products.length === 0){
+            setInCart(false)
+        }
     }
 
     const totalPrice = () => {
@@ -29,9 +35,13 @@ export const StoreProvider = ({children}) => {
     const deleteList = () => {
         setProducts([])
     }
+
+    const cartWidgetCount = () => {
+        return products.reduce((add, i) => (add += i.qty), 0)
+    }
     
     return (
-        <StoreContext.Provider value={{ products, addItem, removeItem, totalPrice, deleteList }}>{children}
+        <StoreContext.Provider value={{ products, addItem, removeItem, totalPrice, deleteList, cartWidgetCount }}>{children}
         </StoreContext.Provider>
     )
 }

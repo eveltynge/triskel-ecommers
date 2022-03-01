@@ -1,7 +1,17 @@
-const CartWidget = (props) => {
+import React from 'react';
+import CartContext from './CartContext';
+import { Link } from 'react-router-dom';
+
+const CartWidget = () => {
+    const {cartWidgetCount} = CartContext()
+
     return (
         <>
-            <img src={props.imagen} alt='Carrito de compras'/>
+            <Link to= {'/cart'}>
+                <div>
+                    {cartWidgetCount()}
+                </div>
+            </Link>
         </>
     );
 }
