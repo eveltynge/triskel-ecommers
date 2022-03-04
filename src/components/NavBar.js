@@ -14,10 +14,10 @@ const NavBar = () => {
             <Brand logo={Logo} style={{padding: "20px"} }>
                 <Link  to='/' />
             </Brand>
-            <Link to='/category/1' activeClassName="currentCategory" style={{textDecoration: "none", color: "#343232", paddingLeft: "15px", textTansform: "uppercase", fontSize: "22px"}}>Home</Link>
-            <Link to='/category/2' activeClassName="currentCategory" style={{textDecoration: "none", color: "#343232", paddingLeft: "15px", textTansform: "uppercase", fontSize: "22px"}}>Portamaceta</Link>
-            <Link to='/category/4' activeClassName="currentCategory" style={{textDecoration: "none", color: "#343232", paddingLeft: "15px", textTansform: "uppercase", fontSize: "22px"}}>Accesorios</Link>
-            <Link to='/category/3' activeClassName="currentCategory" style={{textDecoration: "none", color: "#343232", padding: "15px", textTansform: "uppercase", fontSize: "22px"}}>Tapiz</Link>
+            <Link to='/category/1' className="currentCategory" style={{textDecoration: "none", color: "#343232", paddingLeft: "15px", textTansform: "uppercase", fontSize: "22px"}}>Home</Link>
+            <Link to='/category/2' className="currentCategory" style={{textDecoration: "none", color: "#343232", paddingLeft: "15px", textTansform: "uppercase", fontSize: "22px"}}>Portamaceta</Link>
+            <Link to='/category/4' className="currentCategory" style={{textDecoration: "none", color: "#343232", paddingLeft: "15px", textTansform: "uppercase", fontSize: "22px"}}>Accesorios</Link>
+            <Link to='/category/3' className="currentCategory" style={{textDecoration: "none", color: "#343232", padding: "15px", textTansform: "uppercase", fontSize: "22px"}}>Tapiz</Link>
             <CartWidget imagen={Imagen} />                    
         </>
     );

@@ -1,11 +1,10 @@
-import { useState, createContext, useContext } from "react";
+import { useState, createContext } from "react";
 
-const StoreContext = createContext();
-const CartContext = () => useContext(StoreContext);
+export const CartContext = createContext();
 
-export const StoreProvider = ({children}) => {
+const StoreProvider = ({children}) => {
     const [products, setProducts] = useState([])
-    const [inCart, setInCart] = useState(false)
+    const setInCart = useState(false)
 
     const addItem = (item, qty) => {
         const inCartList = products.find((i) => i.id === item.id)
@@ -41,10 +40,10 @@ export const StoreProvider = ({children}) => {
     }
     
     return (
-        <StoreContext.Provider value={{ products, addItem, removeItem, totalPrice, deleteList, cartWidgetCount }}>{children}
-        </StoreContext.Provider>
+        <CartContext.Provider value={{ products, addItem, removeItem, totalPrice, deleteList, cartWidgetCount }}>{children}
+        </CartContext.Provider>
     )
 }
 
 
-export default CartContext;
+export default StoreProvider;

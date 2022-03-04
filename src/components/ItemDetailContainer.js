@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
         customFetch(2000, products.find(item => item.id === parseInt(itemId)))
             .then(result => setDato(result))
             .catch(error => console.log(error))
-    },[]);
+    },[itemId]);
     console.log(itemId)
     return (
         <ItemDetail item={dato} />

@@ -10,8 +10,8 @@ import StoreProvider from './components/CartContext';
 
 function App() {
   return (
+  <StoreProvider>
   <Router>
-    <StoreProvider>
       <NavBar />
         <Routes>
           <Route exact path='/' element={<ItemListContainer />} /> 
@@ -19,8 +19,8 @@ function App() {
           <Route path='/item/:itemId' element={<ItemDetailContainer />} /> 
           <Route path='/cart' element={<Cart />} />
         </Routes>
+    </Router>
       </StoreProvider>
-  </Router>
   );
 }
 
