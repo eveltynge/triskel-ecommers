@@ -4,7 +4,31 @@ import ItemCount from "./ItemCount";
 import products from '../utils/products';
 import { useParams } from 'react-router';
 
-const ItemListContainer = () => {
+/*const ItemListContainer = () => {
+  const [datos, setDatos] = useState([]);
+  const { idCategory } = useParams();
+
+  useEffect(() => {
+    const firestoreFetch = async () => {
+      const querySnapshot = await getDocs(collection(db, "products"));
+      return querySnapshot.docs.map( document => ({
+        id: document.id,
+        ...document.data()
+      }))
+    }
+    firestoreFetch()
+      .then(result => setDatos(result))
+      .catch(error => console.log(error));
+  }, [datos]);
+
+  useEffect(() => {
+    return (() => {
+      setDatos([])
+    })
+  }, []);
+}
+*/
+ const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { idCategory } = useParams();
 
@@ -38,5 +62,5 @@ const ItemListContainer = () => {
             <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </>
     )
-}
+} 
 export default ItemListContainer;
